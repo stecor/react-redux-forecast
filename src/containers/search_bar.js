@@ -26,10 +26,10 @@ class SearchBar extends Component{
     return(
 
       <form onSubmit={this.onFormSubmit} className="input-group">
-          <input type="text"
-                 className="form-control"
+          <input className="form-control"
                  placeholder="Search five-day of cities"
-                 value={this.state.term} onChange={this.onInputChange}/>
+                 value={this.state.term}
+                 onChange={this.onInputChange}/>
           <span className="input-group-btn">
             <button type='submit' className="btn btn-outline-secondary" >Submit</button>
           </span>
@@ -40,7 +40,7 @@ class SearchBar extends Component{
 
 function mapDispatchToProps(dispatch){
 
-  return bindActionCreators({ fetchWeather}, dispatch);
+  return bindActionCreators({fetchWeather}, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(null,mapDispatchToProps)(SearchBar);
